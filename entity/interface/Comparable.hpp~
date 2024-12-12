@@ -1,0 +1,20 @@
+// Created by author ethereal on 2024/11/21.
+// Copyright (c) 2024 ethereal. All rights reserved.
+#ifndef COMPARABLE_HPP
+#define COMPARABLE_HPP
+
+namespace common::interface
+{
+/// \class Comparable
+/// \brief Abstract interface for comparable objects.
+template <typename T> class Comparable abstract
+{
+public:
+	virtual ~Comparable() = default;
+
+	[[nodiscard]] virtual auto compareTo(const T& other) const -> int = 0;
+
+	[[nodiscard]] virtual auto equals(const T& other) const -> bool = 0;
+};
+} // namespace common::interface
+#endif // COMPARABLE_HPP
